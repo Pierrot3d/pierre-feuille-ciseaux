@@ -28,7 +28,7 @@ function win(userChoice, computerChoice) {
   userScore_span.innerHTML = userScore;
   result_p.innerHTML = convertToWord(userChoice) + " bat " + convertToWord(computerChoice) + ". Tu as gagné !";
   userChoice_div.classList.add('green-glow');
-  setTimeout(function() { userChoice_div.classList.remove('green-glow') }, 1000);
+  setTimeout(() => userChoice_div.classList.remove('green-glow'), 1000);
 }
 
 function lose(userChoice, computerChoice) {
@@ -37,14 +37,14 @@ function lose(userChoice, computerChoice) {
   computerScore_span.innerHTML = computerScore;
   result_p.innerHTML = convertToWord(userChoice) + " est battue " + convertToWord(computerChoice) + ". Tu as perdu !"
   userChoice_div.classList.add('red-glow');
-  setTimeout(function() { userChoice_div.classList.remove('red-glow') }, 1000);
+  setTimeout(() => userChoice_div.classList.remove('red-glow'), 1000);
 }
 
 function draw(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
   result_p.innerHTML = "Égalité, recommences !"
   userChoice_div.classList.add('grey-glow');
-  setTimeout(function() { userChoice_div.classList.remove('grey-glow') }, 1000);
+  setTimeout(() => userChoice_div.classList.remove('grey-glow'), 1000);
 }
 
 // The game
@@ -73,17 +73,11 @@ function game(userChoice) {
 // User choices
 
 function main() {
-  rock_div.addEventListener('click', function(){
-    game("r");
-  })
+  rock_div.addEventListener('click',() => game("r"));
 
-  paper_div.addEventListener('click', function(){
-    game("p");
-  })
+  paper_div.addEventListener('click',() => game("p"));
 
-  scissors_div.addEventListener('click', function(){
-    game("s");
-  })
+  scissors_div.addEventListener('click',() => game("s"));
 }
 
 main();
