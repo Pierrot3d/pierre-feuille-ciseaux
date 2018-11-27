@@ -10,11 +10,31 @@ body {
 
 header {
   background: white;
-  padding: 20px;
+  padding: 1em;
 }
 
 header > h1 {
   color: #25272E;
   text-align: center;
+  font-family: nunito, sans-serif;
+}
+
+.score-board {
+  margin: 1em auto;
+  border: 0.1em solid white;
+  border-radius: 4px;
+  text-align: center;
+  width: 6em;
+  color: white;
+  font-size: 3em;
+  padding: 0.2em 1em;
+  font-family: nunito, sans-serif;
+}
+
+.badge {
+  background:#E2584D;
+  color: white;
+  font-size: 0.8em;
+  padding: 0.1em 0.5em;
   font-family: nunito, sans-serif;
 }
