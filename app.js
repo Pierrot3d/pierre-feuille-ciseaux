@@ -16,11 +16,14 @@ function getComputerChoice() {
   return choices [randomNumber];
 }
 
+
 function convertToWord(letter){
   if (letter === "r") return "La pierre";
   if (letter === "p") return "La feuille";
   if (letter === "s") return "Le(s) ciseaux";
 }
+
+// Victoire, défaite, nul
 
 function win(userChoice, computerChoice) {
   const userChoice_div = document.getElementById(userChoice);
@@ -29,6 +32,8 @@ function win(userChoice, computerChoice) {
   result_p.innerHTML = convertToWord(userChoice) + " bat " + convertToWord(computerChoice) + ". Tu as gagné !";
   userChoice_div.classList.add('green-glow');
   setTimeout(() => userChoice_div.classList.remove('green-glow'), 1000);
+  setTimeout(() => userScore_span.classList.add('green-win'), 200);
+  setTimeout(() => userScore_span.classList.remove('green-win'), 1000);
 }
 
 function lose(userChoice, computerChoice) {
@@ -38,6 +43,8 @@ function lose(userChoice, computerChoice) {
   result_p.innerHTML = convertToWord(userChoice) + " est battue " + convertToWord(computerChoice) + ". Tu as perdu !"
   userChoice_div.classList.add('red-glow');
   setTimeout(() => userChoice_div.classList.remove('red-glow'), 1000);
+  setTimeout(() => computerScore_span.classList.add('red-lose'), 200);
+  setTimeout(() => computerScore_span.classList.remove('red-lose'), 1000);
 }
 
 function draw(userChoice, computerChoice) {
