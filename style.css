@@ -32,6 +32,8 @@ header > h1 {
   position: relative;
 }
 
+
+
 .badge {
   background:#E2584D;
   color: white;
@@ -89,4 +91,18 @@ header > h1 {
   font-family: nunito, sans-serif;
   font-weight: bold;
   font-size: 2em;
+}
+
+.green-glow {
+  border: 1em solid #4dcc7d;
+  box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow {
+  border: 1em solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+}
+.grey-glow {
+  border: 1em solid #464647;
+  box-shadow: 0 0 10px #25292b;
 }
